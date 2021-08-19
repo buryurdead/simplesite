@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Olbaid's Hell Hole</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/300x70.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Welcom</a></li>
+                    <li><a href="#">to</a></li>
+                    <li><a href="#">The</a></li>
+                    <li><a href="#">Hole!</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/350x7002.png" class="devil">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/rocket.png">
+                    <div>
+                        <h1>Lift off!</h1>
+                        <p>Get gone to the moon!!</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/bat.png">
+                    <div>
+                        <h1>Fear n Loathing</h1>
+                        <p>Cant stop here this is bat country!</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/chainsaw.png">
+                    <div>
+                        <h1>The Evil Dead?</h1>
+                        <p>Not with my Chainsaw hand!</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/vampire.png">
+                    <div>
+                        <h1>Taste 'em.</h1>
+                        <p>You can lick these balls cap-i-tan!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Scroll It!!</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+    
+    
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
+</html>

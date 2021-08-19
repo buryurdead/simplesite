@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative; /* is positioned relative to its normal position. Setting the top, right, bottom, 
+                        and left properties of a relatively-positioned element will cause it to be 
+                        adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element. */
+    overflow: hidden; /* prevents scrollbars from showing up, even when they're necessary. */
+    background: linear-gradient(to right, #2e2b2b, #473f41); /*Makes bacground transition to the 
+                                                                  right from one color to another */
+}
+
+nav{
+    width: 80%;
+    position: sticky; /* Sticky positioning can be thought of as a hybrid of relative and fixed 
+                      positioning. A stickily positioned element is treated as relatively positioned 
+                      until it crosses a specified threshold, at which point it is treated as fixed 
+                      until it reaches the boundary of its parent.*/
+    margin: 20px auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    flex-basis: 20%; /* sets the initial main size of a flex item. It sets the size of the content 
+                     box unless otherwise set with box-sizing */
+}
+
+.logo img{
+    width: 300px;
+}
+
+.nav-links{
+   flex: 1;
+   text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.information{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: -10%; /* moves div off the screen -10 */
+    transform: translateY(-50%);
+}
+
+#circle{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.feature img{
+    width: 70px;
+}
+
+.feature{
+    position: absolute;
+    display: flex;
+    color: black;
+}
+
+.feature div{
+    margin-left: 20px; /* 30px space between img and text */
+}
+
+.feature div p{
+    margin-top: 8px; /* 8px space between text lines making smaler text on second line */
+}
+
+.one{
+    top: 450px;
+    right: 50px;
+}
+
+.two{
+    top: 150px;
+    left: 350px;
+    transform: rotate(-90deg);
+}
+
+.three{
+    bottom: 450px;
+    left: 50px;
+    transform: rotate(-180deg);
+}
+
+.four{
+    bottom: 150px;
+    right: 350px;
+    transform: rotate(-270deg);
+}
+
+.devil{
+    width: 200px;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    transform: translateY(-50%); /* adjust horizontal */
+    z-index: 1;
+}
+
+.controls{
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50);
+    text-align: center;
+}
+
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+
+#upBtn{
+    width: 15px;
+    cursor: pointer;
+    
+}
+
+#downBtn{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid black;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid black;
+    border-left: 500px solid black;
+    position: absolute;
+    left: 0;
+    top:0;
+}
